@@ -36,8 +36,8 @@
         "fr": "TK5 : soumettre un travail"
       },
       "description": {
-        "en": "SUBMIT a JCL data set at READY (from ISPF, READY or a *** prompt), then STATUS until the job ends. Default: SYS2.JCLLIB(TESTCOB), a COBOL hello world.",
-        "fr": "SUBMIT d’un JCL à READY (depuis ISPF, READY ou un « *** »), puis STATUS jusqu’à la fin du travail. Par défaut : SYS2.JCLLIB(TESTCOB), un « hello world » en COBOL."
+        "en": "SUBMIT a JCL data set at READY (from ISPF, READY or a *** prompt), STATUS until the job ends, then back to the ISPF menu. Default: SYS2.JCLLIB(TESTCOB), a COBOL hello world.",
+        "fr": "SUBMIT d’un JCL à READY (depuis ISPF, READY ou un « *** »), STATUS jusqu’à la fin du travail, puis retour au menu d’ISPF. Par défaut : SYS2.JCLLIB(TESTCOB), un « hello world » en COBOL."
       }
     },
     {

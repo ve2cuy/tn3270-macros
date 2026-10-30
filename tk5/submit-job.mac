@@ -1,6 +1,6 @@
-# Submit a job and wait for its end (TSO SUBMIT and STATUS at READY).
-# Works from ISPF, READY or a "***" prompt. Done: output held (ON OUTPUT QUEUE) or
-# already printed (NOT FOUND).
+# Submit a job and wait for its end (TSO SUBMIT and STATUS at READY), then back to the
+# ISPF menu. Works from ISPF, READY or a "***" prompt. Done: output held (ON OUTPUT
+# QUEUE) or already printed and purged (NOT FOUND).
 ask dsn "JCL data set" "'SYS2.JCLLIB(TESTCOB)'"
 ask job "Job name" "TESTCOB"
 # Up to READY: "***" prompts, then PF3 out of ISPF panels and X on the primary menu.
@@ -28,3 +28,8 @@ repeat 100
   if "ON OUTPUT QUEUE" break
   if "NOT FOUND" break
 end
+# Back to the ISPF primary menu.
+clear
+type "ISPF"
+enter
+wait 30 "Option  ===>"
