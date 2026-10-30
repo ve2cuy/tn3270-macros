@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "macros": [
+    {
+      "id": "tk5-tso-logon",
+      "file": "tk5/tso-logon.mac",
+      "system": "TK5",
+      "name": {
+        "en": "TK5: TSO logon",
+        "fr": "TK5 : connexion TSO"
+      },
+      "description": {
+        "en": "Logon from the welcome screen to the ISPF menu (asks for the user ID and password; waits up to 15 minutes for TSO after the IPL).",
+        "fr": "Connexion de l’écran d’accueil au menu d’ISPF (demande l’utilisateur et le mot de passe; attend TSO jusqu’à 15 minutes après l’IPL)."
+      }
+    },
+    {
+      "id": "tk5-tso-logoff",
+      "file": "tk5/tso-logoff.mac",
+      "system": "TK5",
+      "name": {
+        "en": "TK5: TSO logoff",
+        "fr": "TK5 : déconnexion TSO"
+      },
+      "description": {
+        "en": "Leaves ISPF from any panel, then LOGOFF back to the welcome screen.",
+        "fr": "Sort d’ISPF depuis n’importe quel panneau, puis LOGOFF jusqu’à l’écran d’accueil."
+      }
+    },
+    {
+      "id": "tk5-submit-job",
+      "file": "tk5/submit-job.mac",
+      "system": "TK5",
+      "name": {
+        "en": "TK5: submit a job",
+        "fr": "TK5 : soumettre un travail"
+      },
+      "description": {
+        "en": "SUBMIT a JCL data set at READY (from ISPF, READY or a *** prompt), then STATUS until the job ends. Default: SYS2.JCLLIB(TESTCOB), a COBOL hello world.",
+        "fr": "SUBMIT d’un JCL à READY (depuis ISPF, READY ou un « *** »), puis STATUS jusqu’à la fin du travail. Par défaut : SYS2.JCLLIB(TESTCOB), un « hello world » en COBOL."
+      }
+    },
+    {
+      "id": "tk5-console-command",
+      "file": "tk5/console-command.mac",
+      "system": "TK5",
+      "name": {
+        "en": "TK5 console: operator command",
+        "fr": "Console TK5 : commande d’opérateur"
+      },
+      "description": {
+        "en": "Operator command on the operator console of ibm-z-emu (ibmz-relay --console 3271).",
+        "fr": "Commande d’opérateur sur la console de l’opérateur d’ibm-z-emu (ibmz-relay --console 3271)."
+      }
+    },
+    {
+      "id": "tk5-console-shutdown",
+      "file": "tk5/console-shutdown.mac",
+      "system": "TK5",
+      "name": {
+        "en": "TK5 console: shutdown",
+        "fr": "Console TK5 : arrêt"
+      },
+      "description": {
+        "en": "Clean shutdown of TK5 on the operator console (S SHUTDOWN until IEE334I HALT EOD SUCCESSFUL).",
+        "fr": "Arrêt propre de TK5 sur la console de l’opérateur (S SHUTDOWN jusqu’à IEE334I HALT EOD SUCCESSFUL)."
+      }
+    }
+  ]
+}

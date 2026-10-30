@@ -1,0 +1,6 @@
+# Clean shutdown of TK5 on the console (ibmz-relay --console 3271): S SHUTDOWN;
+# the page answers the shutdown questions itself. End: HALT EOD SUCCESSFUL.
+wait 20 "OPERATOR CONSOLE"
+type "S SHUTDOWN"
+enter
+wait 600 "IEE334I"

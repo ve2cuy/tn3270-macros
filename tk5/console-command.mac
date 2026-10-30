@@ -1,0 +1,7 @@
+# Operator command on the console (ibmz-relay --console 3271), then its reply.
+ask cmd "Operator command" "D A,L"
+wait 20 "OPERATOR CONSOLE"
+type "{cmd}"
+enter
+wait "OPERATOR CONSOLE"
+pause 3
