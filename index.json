@@ -3,15 +3,15 @@
   "macros": [
     {
       "id": "tk5-tso-logon",
-      "file": "tk5/tso-logon.mac",
+      "file": "tk5/tk5-tso-logon.mac",
       "system": "TK5",
       "name": {
-        "en": "TK5: TSO logon",
+        "en": "TK5 : connexion TSO",
         "fr": "TK5 : connexion TSO"
       },
       "description": {
-        "en": "Logon from the welcome screen to the ISPF menu (asks for the user ID and password; waits up to 15 minutes for TSO after the IPL).",
-        "fr": "Connexion de l’écran d’accueil au menu d’ISPF (demande l’utilisateur et le mot de passe; attend TSO jusqu’à 15 minutes après l’IPL)."
+        "en": "test",
+        "fr": "test"
       }
     },
     {
