@@ -1,0 +1,25 @@
+# TSO logon: welcome screen, password, "***" messages, ISPF menu.
+ask user "User ID" "HERC01"
+secret password "Passwd"
+# Up to 15 minutes: TSO may still be starting after the IPL.
+wait 900 "Logon ===>" "ENTER LOGON OR LOGOFF"
+if "Logon ===>" type "HERC02"
+ifnot "Logon ===>" type "LOGON HERC02"
+enter
+wait "PASSWORD" "IN USE" "NOT IN SYSTEM"
+# Refused (user ID in use or unknown): back to the welcome screen, then stop.
+ifnot "PASSWORD" enter
+ifnot "PASSWORD" wait "ENTREZ LOGON OR LOGOFF"
+ifnot "PASSWORD" type "LOGOFF"
+ifnot "PASSWORD" enter
+ifnot "PASSWORD" wait 60 "Logon ===>"
+ifnot "PASSWORD" stop "Logon refused: user ID in use or unknown"
+type "{password}"
+enter
+repeat 10
+  wait 120 "***" "Option  ===>" "READY" "NOT AUTHORIZED" "INVALID"
+  if "NOT AUTHORIZED" stop "Password refused"
+  if "INVALID" stop "Password refused"
+  ifnot "***" break
+  enter
+end
