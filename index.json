@@ -65,6 +65,19 @@
         "en": "Clean shutdown of TK5 on the operator console (S SHUTDOWN until IEE334I HALT EOD SUCCESSFUL).",
         "fr": "Arrêt propre de TK5 sur la console de l’opérateur (S SHUTDOWN jusqu’à IEE334I HALT EOD SUCCESSFUL)."
       }
+    },
+    {
+      "id": "tk5-list-volume",
+      "file": "tk5/list-volume.mac",
+      "system": "TK5",
+      "name": {
+        "en": "TK5: list a volume",
+        "fr": "TK5 : contenu d’un volume"
+      },
+      "description": {
+        "en": "Lists the data sets of a volume with TSO VTOC (organization, format, size, name). Works from ISPF, READY or a *** prompt; stops on the first page.",
+        "fr": "Liste les fichiers d’un volume par la commande VTOC de TSO (organisation, format, taille, nom). Depuis ISPF, READY ou un « *** »; s’arrête à la première page."
+      }
     }
   ]
 }
